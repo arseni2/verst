@@ -1,0 +1,394 @@
+html{
+overflow-x: hidden;               
+	overflow: overlay;  
+	box-sizing: border-box;
+	margin-right: 0;        
+}               
+body{               
+	padding: 0;               
+	margin:0;                
+	max-width: 100%;               
+	max-height: 100%;               
+	margin-right: 12%;               
+}               
+/* скрываем чекбокс */                                 											
+#menu__toggle {                                 											
+  opacity: 0;                                 											
+}                                 											
+.logoinmenu{                                 											
+	/*position: absolute;*/                                 											
+	margin-bottom: 100px;                                 											
+	margin-top: 7px;                                 											
+	margin-left: 0px;                                 											
+                                 											
+}                                 											
+/* стилизуем кнопку */                                 											
+.menu__btn {                                 											
+  display: flex; /* используем flex для центрирования содержимого */                                 											
+  align-items: center;  /* центрируем содержимое кнопки */                                 											
+  position: fixed;                                 											
+  top: 10px;                                 											
+  left: 10px;                                 											
+  width: 26px;                                 											
+  height: 26px;                                 											
+  cursor: pointer;                                 											
+  z-index: 9999;                                 											
+}                                 											
+/* добавляем "гамбургер" */                                 											
+.menu__btn > span,                                 											
+.menu__btn > span::before,                                 											
+.menu__btn > span::after {                                 											
+  display: block;               
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -1%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  z-index: 999;
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.menu__item:hover {
+  background-color:  #A99BFF;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .60s;
+}
+.menu__box {
+  transition-duration: .40s;
+}
+.menu__item {
+  transition-duration: .40s;
+}
+
+.divse {
+		position: absolute;
+	margin-left: 0px;
+  outline: 0;
+ width: 100px;
+  
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.divse > .textbox {
+  outline: 0;
+  height: 30px;
+  width: 225px;
+  line-height: 42px;
+  padding: 0 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #212121;
+  border: 0;
+  float: left;
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.divse > .textbox:focus {
+  outline: 0;
+  background-color: #FFF;
+}
+
+.divse > .button {
+  outline: 0;
+  background: none;
+  background-color: rgba(38, 50, 56, 0.8);
+  float: left;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 42px;
+  border: 0;
+  color: #FFF;
+  
+  font-size: 10px;
+  text-rendering: auto;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color .4s ease;
+  transition: background-color .4s ease;
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.divse > .button:hover {
+  background-color: rgba(0, 150, 136, 0.8);        
+}        
+        
+        
+        
+        
+        
+#header{        
+	background: #A99BFF;        
+	margin-top:0px;         
+	width: 100%;        
+	margin:0;        
+	padding: 0;         
+}        
+.cardowner{        
+position: absolute;        
+	/*margin-right: 10px;         
+	margin-left: 10px;
+	margin-bottom: 10px;*/
+	border: none  !important;
+	margin-left: 100px;
+	
+	
+
+}
+.cards{
+	width: auto;
+	border: 2px solid black;
+	padding-bottom: 25px; 
+}
+
+.cards__item__text{
+	visibility: hidden;
+	border: none  !important;
+	font-size: 60px;
+	margin-top: 0px;
+	margin-left: 0px;
+	color: white;
+	position: absolute;
+	width: 290px;
+	z-index: 1;
+	text-align: center; 
+	margin-bottom: 10px;
+	height: 340px;
+}
+.cards__item__text:hover{
+	visibility: visible;
+	font-size: 100px;
+	z-index: 99999;
+}
+.imgshow{
+	display: flex;
+	position: all;
+	justify-content: center;
+	align-items: center;
+visibility: hidden;
+z-index: 1;
+width: 1px;
+height: 1px;
+}
+.imgshow__text{
+	visibility: hidden;
+}
+.cards__item__img{
+
+	border: none  !important;
+	width: 250px;
+	height: 300px;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+z-index: 0;
+transition: 1s;
+}
+.slider__item__img{
+	width: 250px;
+	height: 340px;
+}
+.cards__item__under__img__text__img{
+border: none  !important;
+	font-size: 20px;
+	margin-top: 40px;
+	margin-left: 23px;
+	color: black;
+	position: absolute;
+	width: 200px;
+	z-index: 99999;
+	text-align: center; 
+	margin-bottom: 10px;
+	height: 0px;
+
+	transition: 1s;
+	opacity: 0;
+}
+.cards__item__under__img__text{
+	border: none  !important;
+	font-size: 20px;
+	margin-top: 298px;
+	margin-left: 20px;
+	color: black;
+	position: absolute;
+	width: 200px;
+	z-index: 99;
+	text-align: center; 
+	margin-bottom: 10px;
+	height: -200px;
+
+}
+@media (min-width:1200px) { 
+	.cardowner{
+		margin-left: 150px !important;
+	}
+	.divse{
+		margin-right: 400px;
+	}
+	.cards__item__img:hover{
+	transition: 1s;
+	filter: brightness(30%);
+}
+.cards__item__img:hover + p{
+	/*filter: brightness(30%);*/
+	transition: 1s;
+	position: absolute;
+	color: white;
+	font-size: 25px;
+	margin-bottom: 60px;
+	opacity: 1;
+	z-index: 0;
+	margin-left: 20px;
+
+}
+ };
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px){
+  	.divse {
+		position: absolute;
+	margin-left: 300px;
+  outline: 0;
+ 
+  
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+  	
+  	.cards__item__text{
+	display: none;
+}
+  	.cards__item__img{
+  		width: 282px;
+  	}
+  	.cardowner{
+  		position: absolute;
+  		margin-left: 0px;
+  		margin-right: 300px;
+  	}
+.cards__item__under__img__text__img{
+border: none  !important;
+	font-size: 20px;
+	margin-top: 40px;
+	margin-left: 23px;
+	color: black;
+	position: absolute;
+	width: 200px;
+	z-index: 99999;
+	text-align: center; 
+	margin-bottom: 10px;
+	height: 0px;
+
+	transition: 1s;
+	opacity: 0;
+}
+.cards{
+	position: absolute;
+	margin-left: 0px;
+  		margin-right: 900px;
+}
+
+}
+
+}
+
+
+}
+.movielist{
+	border: none  !important;
+	margin: 0;
+	padding: 0;
+}
+
+/*.cards__item__text:hover{
+	visibility: visible;
+	font-size: 200px;
+	margin-top: 10px;
+	margin-left: 60px;
+	color: white;
+	position: absolute;
+	width: 250px;
+	z-index: 9999999999999999;
+	text-align: center; 
+	margin-bottom: 10px;
+	height: 340px;
+}*/
+.form{
+	padding-top: 10px;
+
+}
+.footer{
+
+
+	background: #A99BFF;
+
+
+	
+}
+.form__item{
+	margin-top: 5px;
+}
+.icons{
+	display: flex;
+	margin-top: 20px;
+	justify-content: flex-end;
+	font-size: 30px;
+}
+.slider{
+	margin-left: 4%;
+}
+
