@@ -1,3 +1,11 @@
+/*
+для мобилок можно поиск по центру и лого над поиском 
+футер надо прижать и растянуть на 100% элемнты в целом надо сделвть побольше
+и закрывать бургер не тольео при нажатие на крестик
+щирину у слайдера побольше поиск побольше и лого можно сделать ещё сделать 
+заппрос media и у карт менять ширину взависимости от мобилки
+и что-то надо с иконками придумать они не отображаются
+*/
 html{
 overflow-x: hidden;               
 	overflow: overlay;  
@@ -175,7 +183,8 @@ body{
 	margin:0;        
 	padding: 0;         
 }        
-.cardowner{        
+.cardowner{ 
+right: 10%;       
 position: absolute;        
 	/*margin-right: 10px;         
 	margin-left: 10px;
@@ -270,8 +279,116 @@ border: none  !important;
 	height: -200px;
 
 }
+@media (min-width: 988px; max-width: 1999px;){
+	.slider{
+		
+		
+	}
+	.cardowner{        
+position: absolute;
+margin-left: 0px;  
+right: 20%; 
+margin-right: 50%;   
+	/*margin-right: 10px;         
+	margin-left: 10px;
+	margin-bottom: 10px;*/
+	border: none  !important;
+	margin-left: 100px;
+	
+	
+
+}
+.cards{
+	width: auto;
+	border: 2px solid black;
+	padding-bottom: 25px; 
+	margin-right: 50%;
+}
+
+.cards__item__text{
+	visibility: hidden;
+	border: none  !important;
+	font-size: 60px;
+	margin-top: 0px;
+	margin-left: 0px;
+	color: white;
+	position: absolute;
+	width: 290px;
+	z-index: 1;
+	text-align: center; 
+	margin-bottom: 10px;
+	height: 340px;
+}
+.cards__item__text:hover{
+	visibility: visible;
+	font-size: 100px;
+	z-index: 99999;
+}
+.imgshow{
+	display: flex;
+	position: all;
+	justify-content: center;
+	align-items: center;
+visibility: hidden;
+z-index: 1;
+width: 1px;
+height: 1px;
+}
+.imgshow__text{
+	visibility: hidden;
+}
+.cards__item__img{
+
+	border: none  !important;
+	width: 250px;
+	height: 300px;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+	padding-bottom: 0px !important;
+	padding-top: 0px !important;
+z-index: 0;
+transition: 1s;
+}
+.slider__item__img{
+	width: 250px;
+	height: 340px;
+}
+.cards__item__under__img__text__img{
+border: none  !important;
+	font-size: 20px;
+	margin-top: 40px;
+	margin-left: 23px;
+	color: black;
+	position: absolute;
+	width: 200px;
+	z-index: 99999;
+	text-align: center; 
+	margin-bottom: 10px;
+	height: 0px;
+
+	transition: 1s;
+	opacity: 0;
+}
+.cards__item__under__img__text{
+	border: none  !important;
+	font-size: 20px;
+	margin-top: 298px;
+	margin-left: 20px;
+	color: black;
+	position: absolute;
+	width: 200px;
+	z-index: 99;
+	text-align: center; 
+	margin-bottom: 10px;
+	height: -200px;
+
+}
+
+}
 @media (min-width:1200px) { 
+
 	.cardowner{
+		right: 10%;
 		margin-left: 150px !important;
 	}
 	.divse{
@@ -298,6 +415,9 @@ border: none  !important;
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px){
+  	.movielist{
+  		right: 25%;
+  	}
   	.divse {
 		position: absolute;
 	margin-left: 300px;
@@ -317,8 +437,8 @@ border: none  !important;
   	}
   	.cardowner{
   		position: absolute;
-  		margin-left: 0px;
-  		margin-right: 300px;
+  		left: 0px;
+  		right: 99900px;
   	}
 .cards__item__under__img__text__img{
 border: none  !important;
@@ -373,7 +493,7 @@ border: none  !important;
 }
 .footer{
 
-
+	width: 100%;
 	background: #A99BFF;
 
 
