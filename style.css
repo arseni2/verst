@@ -415,6 +415,19 @@ border: none  !important;
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px){
+  	html{
+  		width: 100%;
+  	}
+  	.footer{
+  		display: flex;
+  		align-items: center;
+	position: absolute;
+	margin-top: 320px;
+	height: 100%;
+	width: 100%;
+	background: #A99BFF;
+	padding-bottom: 320px;	
+}
   	.movielist{
   		right: 25%;
   	}
@@ -458,8 +471,7 @@ border: none  !important;
 }
 .cards{
 	position: absolute;
-	margin-left: 0px;
-  		margin-right: 900px;
+  		right: 300px;
 }
 
 }
@@ -492,9 +504,13 @@ border: none  !important;
 
 }
 .footer{
-
+	display: flex;
+	flex: 0 0 auto;
+	position: absolute;
+	height: 100%;
 	width: 100%;
 	background: #A99BFF;
+	top: 100%;
 
 
 	
